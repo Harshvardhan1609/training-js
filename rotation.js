@@ -1,16 +1,9 @@
-let rotation=(a,num)=>{
-    for(i=1;i<=num;i++)
+(function(arr,k){
+    if(arr.length===0) console.log([])
+    if(arr.length===1) console.log(arr)
+    for(let i=0; i<k ; i++)
     {
-        b = a[0]
-        c = a[1]
-        a.shift()
-        a.shift()
-        a.push(b)
-        a.push(c)
+        arr.unshift(arr.pop())
     }
-}
-a = [10,30,60]
-alert(a)
-k = prompt("Please enter the value of k")
-rotation(a,k)
-alert(a);
+    console.log(arr)
+})([10,30,60],1)
